@@ -1,0 +1,1280 @@
+<!doctype html>
+<html lang="mr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>प्रतिक आणि अंकिता विवाह निमंत्रण</title>
+<meta name="description" content="प्रतिक आणि अंकिता यांचे विवाह निमंत्रण">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400&family=Mukta:wght@300;400;500;600&family=Tiro+Devanagari+Marathi:ital@0;1&display=swap" rel="stylesheet">
+<!--
+=====================================================================
+विवाह निमंत्रण: माझे तपशील (as supplied)
+Groom: प्रतिक | Bride: अंकिता | Order: वर प्रथम (प्रतिक आणि अंकिता)
+Monogram: P & A
+Blessing: श्री गणेशाय नमः | Subtitle: विवाह निमंत्रण
+Main date: १२ डिसेंबर २०२६, सायंकाळी ४:३५ (countdown = 2026-12-12T16:35:00+05:30)
+Venue: शंतनू गार्डन मंगल कार्यालय, मंचर-घोडेगाव रोड, कोटमदरा फाटा जवळ
+Families: सप्रेम, सैद आणि टेमगिरे कुटुंबीय
+Functions: साखरपुडा १०:३०, हळद ११:३०, विवाह ४:३५ (१२ डिसेंबर २०२६, शनिवार)
+Files: photo1.jpg = प्रतिक, photo4.jpg = अंकिता, photo2/3/5 = album,
+       bg1.jpg bg2.jpg bg3.jpg, seal-chime.mp3, reading-music.mp3
+Updates included:
+1. Ultra-realistic 3D Monarch butterfly with articulated forewings/hindwings & drop shadow
+2. Interactive Royal Gold Foil "Scratch to Reveal" card on the Countdown / शुभ मुहूर्त section
+=====================================================================
+-->
+<style>
+/* ===================== 1. TOKENS & BASE ===================== */
+:root{
+  --ivory:#fbf4e6; --cream:#f5e7c8; --card:#fffaf0;
+  --maroon:#7a1e2a; --red:#b3262e; --gold:#c9962b; --teal:#1f7f80;
+  --ink:#3a2418; --muted:#7b5d4a; --footer:#6b1a25;
+  --disp:'Tiro Devanagari Marathi','Cormorant Garamond',Georgia,serif;
+  --latin:'Cormorant Garamond',Georgia,serif;
+  --body:'Mukta',system-ui,sans-serif;
+  --noise:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .45  0 0 0 0 .34  0 0 0 0 .22  0 0 0 .16 0'/></filter><rect width='160' height='160' filter='url(%23n)'/></svg>");
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*{box-sizing:border-box}
+html{overflow-x:clip;scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;padding:0;overflow-x:clip;background:var(--ivory);color:var(--ink);
+  font:400 16px/1.7 var(--body);-webkit-font-smoothing:antialiased}
+html.locked,html.locked body{overflow:hidden;height:100%}
+h1,h2,h3{font-family:var(--disp);color:var(--maroon);margin:0;font-weight:400;line-height:1.3}
+p{margin:0}
+img{display:block;max-width:100%}
+[hidden]:not([hidden=until-found i]){display:none!important}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 max(20px,env(safe-area-inset-left)) 0 max(20px,env(safe-area-inset-right))}
+section{position:relative;padding:88px 0}
+.bg-floral::before,.bg-lotus::before{content:'';position:absolute;inset:0;z-index:-2;pointer-events:none}
+.bg-floral::before{background:linear-gradient(rgba(251,244,230,.86),rgba(251,244,230,.92)),url("bg2.jpg") center top/cover no-repeat}
+.bg-lotus::before{background:linear-gradient(rgba(251,244,230,.82),rgba(251,244,230,.9)),url("bg1.jpg") center top/cover no-repeat}
+.eyebrow{font-size:16px;letter-spacing:.04em;color:var(--red);font-weight:600;text-align:center}
+.h2{font-size:clamp(2rem,6vw,3rem);text-align:center;margin:8px 0 36px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:10px 26px;
+  border-radius:999px;border:1px solid var(--gold);background:linear-gradient(180deg,#c8302f,var(--red));
+  color:#fff8ec;text-decoration:none;cursor:pointer;font:500 16px/1.3 var(--body);
+  transition:transform .5s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--maroon)}
+
+/* ===================== 2. OPENING: SEALED INVITATION ===================== */
+#intro{position:fixed;inset:0;z-index:8000;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  overflow:hidden;touch-action:none;
+  background:radial-gradient(ellipse at center,#8a2a36 0%,#4a1019 72%);transition:opacity .8s ease}
+#intro.gone{opacity:0;pointer-events:none}
+#intro.done{display:none}
+.scene{--w:min(340px,86vw);width:var(--w);height:calc(var(--w) * .7);position:relative;
+  filter:drop-shadow(0 24px 28px rgba(40,6,12,.5))}
+.env{position:absolute;inset:0;perspective:1100px}
+.lining{position:absolute;inset:0;border-radius:4px;z-index:0;
+  background:linear-gradient(rgba(122,30,42,.55),rgba(74,16,25,.7)),url("bg1.jpg") center/cover}
+.letter{position:absolute;left:6%;right:6%;top:9%;height:86%;z-index:2;border-radius:3px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:22px 14px;text-align:center;
+  background:var(--noise),linear-gradient(rgba(255,250,240,.9),rgba(255,247,232,.93)),url("bg2.jpg") center/cover;
+  box-shadow:0 1px 4px rgba(0,0,0,.25);
+  transition:transform 1.1s cubic-bezier(.3,.1,.2,1)}
+.letter::before{content:'';position:absolute;inset:7px;border:1px solid rgba(201,150,43,.8);border-radius:2px;pointer-events:none}
+.letter::after{content:'';position:absolute;inset:11px;border:1px dotted rgba(201,150,43,.6);border-radius:2px;pointer-events:none}
+.letter.rise{transform:translate3d(0,-112%,0)}
+.l-bless{font-family:var(--disp);font-size:16px;color:var(--red)}
+.l-small{font-size:15px;letter-spacing:.05em;color:var(--teal);font-weight:500}
+.l-names{font-family:var(--disp);font-size:clamp(1.8rem,9vw,2.3rem);color:var(--maroon);line-height:1.3}
+.l-names span{font-family:var(--disp);color:var(--gold);font-size:.6em;margin:0 .3em}
+.l-date{font-family:var(--disp);font-size:17px;color:var(--ink)}
+.front{position:absolute;inset:0;z-index:3;border-radius:4px;
+  clip-path:polygon(0 0,50% 62%,100% 0,100% 100%,0 100%);
+  background:linear-gradient(rgba(255,250,240,.6),rgba(255,246,228,.72)),url("bg3.jpg") center 100%/cover}
+.gilt{position:absolute;inset:12px;z-index:3;border:1px solid rgba(201,150,43,.85);border-radius:3px;pointer-events:none;transition:opacity .5s ease}
+.gilt::after{content:'';position:absolute;inset:3px;border:1px solid rgba(201,150,43,.45);border-radius:2px}
+.scene.opened .gilt{opacity:0}
+.flap{position:absolute;left:0;top:0;width:100%;height:62%;z-index:4;transform-origin:50% 0;transform-style:preserve-3d;
+  transition:transform 1s cubic-bezier(.45,.05,.25,1),z-index 0s linear .5s}
+.flap.open{transform:rotateX(180deg);z-index:1}
+.flap .face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;clip-path:polygon(0 0,100% 0,50% 100%)}
+.flap .out{background:linear-gradient(rgba(255,250,240,.55),rgba(255,246,228,.66)),url("bg3.jpg") center 0%/cover}
+.flap .in{transform:rotateX(180deg);background:linear-gradient(rgba(122,30,42,.55),rgba(74,16,25,.7)),url("bg1.jpg") center/cover}
+.seal{position:absolute;left:50%;top:62%;width:76px;height:76px;margin:-38px 0 0 -38px;z-index:5;
+  border:0;padding:0;border-radius:50%;cursor:pointer;display:grid;place-items:center;
+  background:radial-gradient(circle at 36% 30%,#e24b50 0%,#9a2029 55%,#5c1119 100%);
+  box-shadow:inset 0 -4px 7px rgba(0,0,0,.35),inset 0 3px 5px rgba(255,255,255,.22),0 6px 12px rgba(0,0,0,.35);
+  font-family:var(--latin);font-weight:700;font-size:22px;color:#f6dca0;
+  text-shadow:0 1px 0 rgba(0,0,0,.5),0 -1px 0 rgba(255,220,160,.3);
+  transition:transform .25s ease,opacity .4s ease}
+.seal::after{content:'';position:absolute;inset:7px;border-radius:50%;border:1px dashed rgba(246,220,160,.5);pointer-events:none}
+.seal.press{transform:scale(.94)}
+.seal.crack{opacity:0;transform:scale(1.35) rotate(14deg)}
+.ring{position:absolute;left:50%;top:62%;width:60px;height:60px;margin:-30px 0 0 -30px;border-radius:50%;
+  border:2px solid rgba(255,220,140,.9);opacity:0;z-index:6;pointer-events:none}
+.ring.go{animation:ring 1.1s ease-out forwards}
+@keyframes ring{0%{transform:scale(1);opacity:.9}100%{transform:scale(6);opacity:0}}
+.burst{position:absolute;left:50%;top:62%;width:0;height:0;z-index:7;pointer-events:none}
+.burst span{position:absolute;left:-3px;top:-3px;width:6px;height:6px;border-radius:50%;background:#ffe6a3;opacity:0}
+.burst.go span{animation:burst 1.2s ease-out forwards}
+@keyframes burst{0%{opacity:1;transform:translate(0,0) scale(1)}100%{opacity:0;transform:translate(var(--x),var(--y)) scale(.3)}}
+.flash{position:absolute;inset:0;background:#fff7e0;opacity:0;pointer-events:none}
+.flash.go{animation:flash .8s ease forwards}
+@keyframes flash{0%{opacity:0}40%{opacity:.85}100%{opacity:0}}
+.intro-hint{margin-top:28px;color:#f8e9cc;font-size:17px;transition:opacity .3s ease;padding:0 16px;text-align:center}
+
+/* ===================== 3. MUSIC CONTROL ===================== */
+#music{position:fixed;z-index:8500;right:max(16px,env(safe-area-inset-right,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));
+  min-height:44px;min-width:44px;padding:10px 18px;border-radius:999px;border:1px solid var(--gold);
+  background:rgba(255,250,240,.94);color:var(--maroon);font:500 15px/1 var(--body);
+  display:none;align-items:center;gap:8px;cursor:pointer;box-shadow:0 6px 16px rgba(60,10,20,.25)}
+#music.show{display:inline-flex}
+#music svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+#music[aria-pressed="false"] svg{opacity:.45}
+
+/* ===================== 4. REALISTIC 3D BUTTERFLY & EFFECT LAYERS ===================== */
+#route-svg{position:absolute;left:0;top:0;pointer-events:none;z-index:-1;overflow:visible}
+#plane{position:fixed;left:0;top:0;width:86px;height:86px;opacity:.97;pointer-events:none;z-index:3;
+  will-change:transform;perspective:420px;filter:drop-shadow(0 12px 10px rgba(45,12,8,.28))}
+#plane svg{width:86px;height:86px;display:block;overflow:visible}
+#plane .wing-top-fore{transform-box:view-box;transform-origin:43px 43px;animation:foreFlapTop .52s cubic-bezier(.42,0,.58,1) infinite alternate}
+#plane .wing-top-hind{transform-box:view-box;transform-origin:43px 43px;animation:hindFlapTop .52s cubic-bezier(.42,0,.58,1) -.06s infinite alternate}
+#plane .wing-bot-fore{transform-box:view-box;transform-origin:43px 43px;animation:foreFlapBot .52s cubic-bezier(.42,0,.58,1) infinite alternate}
+#plane .wing-bot-hind{transform-box:view-box;transform-origin:43px 43px;animation:hindFlapBot .52s cubic-bezier(.42,0,.58,1) -.06s infinite alternate}
+#plane .antennae{transform-box:view-box;transform-origin:60px 43px;animation:antWiggle 1.1s ease-in-out infinite alternate}
+@keyframes foreFlapTop{
+  0%{transform:scaleY(1.02) skewX(-2deg);filter:brightness(1.05)}
+  100%{transform:scaleY(.24) skewX(8deg);filter:brightness(.82)}
+}
+@keyframes hindFlapTop{
+  0%{transform:scaleY(1) skewX(0deg);filter:brightness(1.02)}
+  100%{transform:scaleY(.30) skewX(5deg);filter:brightness(.85)}
+}
+@keyframes foreFlapBot{
+  0%{transform:scaleY(1.02) skewX(2deg);filter:brightness(1.05)}
+  100%{transform:scaleY(.24) skewX(-8deg);filter:brightness(.82)}
+}
+@keyframes hindFlapBot{
+  0%{transform:scaleY(1) skewX(0deg);filter:brightness(1.02)}
+  100%{transform:scaleY(.30) skewX(-5deg);filter:brightness(.85)}
+}
+@keyframes antWiggle{
+  0%{transform:rotate(-2.5deg)}
+  100%{transform:rotate(2.5deg)}
+}
+#bf-hint{position:fixed;left:0;top:0;z-index:3;pointer-events:none;opacity:0;transition:opacity .6s ease;will-change:transform;
+  background:rgba(255,250,240,.94);color:var(--maroon);border:1px solid var(--gold);border-radius:999px;padding:6px 16px;font-size:16px;font-weight:600;white-space:nowrap;box-shadow:0 4px 12px rgba(60,10,20,.2)}
+#bf-hint.show{opacity:1}
+#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:4}
+.petal{position:fixed;top:-6vh;width:14px;height:18px;border-radius:0 80% 0 80%;opacity:.85;pointer-events:none;z-index:2;
+  background:linear-gradient(135deg,#f3bcb6,#c83e4a);animation-name:fall;animation-timing-function:linear;animation-iteration-count:infinite;will-change:transform}
+.petal.gold{background:linear-gradient(135deg,#ffd27a,#d8891f)}
+@keyframes fall{
+  0%{transform:translate3d(0,0,0) rotate(0)}
+  25%{transform:translate3d(18px,28vh,0) rotate(90deg)}
+  50%{transform:translate3d(-14px,55vh,0) rotate(180deg)}
+  75%{transform:translate3d(16px,82vh,0) rotate(270deg)}
+  100%{transform:translate3d(-8px,118vh,0) rotate(360deg)}}
+.spark{position:fixed;width:12px;height:12px;color:#f6d27a;pointer-events:none;z-index:2;opacity:0;
+  animation:twinkle ease-in-out infinite}
+.spark svg{width:100%;height:100%;fill:currentColor;display:block}
+@keyframes twinkle{0%,100%{opacity:0;transform:scale(.4) rotate(0)}50%{opacity:.9;transform:scale(1) rotate(45deg)}}
+
+/* ===================== 5. HERO ===================== */
+.hero{min-height:100vh;min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;
+  overflow:hidden;padding:64px 0 48px}
+.hero-bg{position:absolute;left:0;right:0;top:-12%;bottom:-12%;z-index:-2;will-change:transform;
+  background:linear-gradient(180deg,rgba(255,249,236,.2),rgba(251,236,214,.5)),url("bg1.jpg") center top/cover no-repeat}
+.hero-in{position:relative;z-index:1;padding:0 20px;width:100%}
+.frame{max-width:560px;margin:0 auto;padding:48px 22px 40px;border:1px solid var(--gold);
+  outline:1px solid rgba(201,150,43,.5);outline-offset:9px;border-radius:220px 220px 18px 18px;background:rgba(255,250,240,.66)}
+.blessing{font-family:var(--disp);font-size:clamp(1.15rem,4.5vw,1.4rem);color:var(--red)}
+.names{font-size:clamp(3.4rem,15vw,6.6rem);margin:14px 0 4px;line-height:1.15}
+.names span{display:block}
+.names .amp{font-family:var(--disp);color:var(--gold);font-size:.4em;line-height:1.4}
+.subtitle{font-size:18px;letter-spacing:.08em;color:var(--teal);margin-top:10px;font-weight:500}
+.hero-date{font-family:var(--disp);font-size:clamp(1.25rem,4.5vw,1.6rem);color:var(--maroon);margin:16px 0 26px}
+.hint{margin-top:26px;font-size:15px;color:var(--muted)}
+
+/* ===================== 6. COUPLE ===================== */
+.couple{display:grid;gap:22px;grid-template-columns:1fr}
+@media (min-width:700px){.couple{grid-template-columns:1fr 1fr}}
+.person{background:var(--card);border:1px solid rgba(201,150,43,.55);outline:1px solid rgba(201,150,43,.3);
+  outline-offset:-8px;border-radius:200px 200px 18px 18px;padding:30px 22px 26px;text-align:center}
+.portrait{width:min(230px,80%);aspect-ratio:3/4;margin:0 auto 14px;overflow:hidden;
+  border-radius:200px 200px 14px 14px;border:2px solid var(--gold);background:#efe3c8}
+.portrait img{width:100%;height:100%;object-fit:cover;display:block}
+.label{font-size:16px;letter-spacing:.06em;color:var(--red);font-weight:600}
+.pname{font-size:clamp(1.9rem,6vw,2.6rem);margin-top:6px}
+.bio{font-size:17px;line-height:1.8;margin-top:12px;color:var(--ink)}
+footer .msg{font-family:var(--disp);font-size:clamp(1.4rem,6vw,1.9rem);color:#e9c77a;margin-top:6px;display:flex;align-items:center;justify-content:center;gap:12px}
+footer .swas{width:28px;height:28px;flex:none}
+footer .nrow{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:8px;font-family:var(--disp);font-size:clamp(1.9rem,8vw,3.2rem);line-height:1.3;color:#f8e9cc}
+footer .hands{width:clamp(64px,18vw,100px);height:auto;flex:none}
+footer .yancha{font-family:var(--disp);font-size:20px;margin-top:6px}
+footer .mitti{max-width:34rem;margin:14px auto 0;line-height:1.9}
+
+/* ===================== 7. COUNTDOWN + SCRATCH TO REVEAL ===================== */
+.scratch-box{position:relative;max-width:680px;margin:0 auto;padding:28px 18px;border-radius:24px;
+  background:linear-gradient(180deg,rgba(255,250,240,.92),rgba(245,231,200,.88));
+  border:2px solid var(--gold);box-shadow:0 14px 34px rgba(122,30,42,.12);overflow:hidden}
+.scratch-inner{transition:transform .6s cubic-bezier(.22,1,.36,1),filter .6s ease}
+.scratch-box.unrevealed .scratch-inner{filter:blur(2px);transform:scale(.98);user-select:none}
+.scratch-date-banner{font-family:var(--disp);font-size:clamp(1.25rem,4.5vw,1.65rem);color:var(--maroon);
+  text-align:center;margin-bottom:18px;padding:8px 16px;border-radius:999px;
+  background:rgba(201,150,43,.15);border:1px dashed var(--gold);display:inline-block}
+.scratch-center{text-align:center}
+.cd{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;max-width:640px;margin:0 auto}
+.cd div{background:var(--card);border:1px solid rgba(201,150,43,.55);border-radius:16px;padding:16px 4px;text-align:center;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.8)}
+.cd b{display:block;font-family:var(--disp);font-weight:400;font-size:clamp(2rem,8vw,3rem);color:var(--maroon);line-height:1.2;font-variant-numeric:tabular-nums}
+.cd span{font-size:15px;color:var(--muted)}
+.just{display:none;font-family:var(--disp);font-style:italic;font-size:clamp(2.2rem,8vw,3.2rem);color:var(--red);text-align:center}
+#scratch-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:5;cursor:grab;touch-action:none;
+  border-radius:22px;transition:opacity .7s ease,transform .7s ease}
+#scratch-canvas:active{cursor:grabbing}
+#scratch-canvas.cleared{opacity:0;pointer-events:none;transform:scale(1.04)}
+.scratch-badge{margin-top:14px;text-align:center;font-size:15px;color:var(--muted);display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
+.scratch-skip{background:none;border:none;color:var(--red);font:600 14px var(--body);text-decoration:underline;cursor:pointer;padding:4px 8px}
+.scratch-box.revealed .scratch-badge{color:var(--teal);font-weight:600}
+
+/* ===================== 8. VENUE ===================== */
+.vgrid{display:grid;gap:16px;grid-template-columns:1fr;max-width:820px;margin:0 auto}
+@media (min-width:700px){.vgrid{grid-template-columns:repeat(3,1fr)}}
+.vcard{background:var(--card);border:1px solid rgba(201,150,43,.5);border-radius:18px;padding:24px 20px;text-align:center;min-width:0}
+.vcard h3{font-size:1.5rem;margin-bottom:8px}
+.vcard p{font-size:17px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:26px}
+.mapcard{display:block;max-width:640px;margin:30px auto 0;border-radius:18px;overflow:hidden;border:1px solid var(--gold);
+  text-decoration:none;color:inherit;background:#efe3c8}
+.mapcard svg{width:100%;height:auto;display:block}
+
+/* ===================== 9. EVENTS TIMELINE ===================== */
+.tl{list-style:none;margin:0 auto;padding:0;max-width:640px;position:relative}
+.tl::before{content:'';position:absolute;left:21px;top:24px;bottom:24px;border-left:2px dashed rgba(201,150,43,.75)}
+.tl li{position:relative;padding:0 0 0 70px;margin-bottom:34px}
+.num{position:absolute;left:0;top:0;width:44px;height:44px;border-radius:50%;background:var(--red);color:#fff8ec;
+  display:grid;place-items:center;font-family:var(--disp);font-size:1.25rem;border:2px solid var(--gold)}
+.tl h3{font-size:clamp(1.8rem,6vw,2.3rem)}
+.meta{margin:8px 0 14px;display:grid;gap:2px}
+.meta p{font-size:17px}
+.meta p b{font-weight:600;color:var(--muted);font-size:15px;margin-right:10px}
+.links{display:flex;flex-wrap:wrap;gap:10px}
+
+/* ===================== 10. ALBUM ===================== */
+.grid{display:grid;gap:12px;grid-template-columns:repeat(2,1fr);max-width:900px;margin:0 auto}
+@media (min-width:720px){.grid{grid-template-columns:repeat(3,1fr)}}
+.grid button{padding:0;border:2px solid var(--gold);background:var(--card);cursor:pointer;aspect-ratio:3/4;
+  border-radius:999px 999px 14px 14px;overflow:hidden;-webkit-tap-highlight-color:transparent}
+.grid img{width:100%;height:100%;object-fit:cover}
+
+/* ===================== 11. FOOTER ===================== */
+footer{background:linear-gradient(180deg,#6b1a25,#4a1019);color:#f8e9cc;text-align:center;
+  padding:64px 20px calc(56px + env(safe-area-inset-bottom))}
+footer .bust{display:flex;justify-content:center;gap:14px;max-width:340px;margin:0 auto 18px}
+footer .fp{flex:1 1 0;min-width:0;aspect-ratio:3/4;overflow:hidden;border-radius:200px 200px 14px 14px;border:2px solid #e9c77a;background:#4a1019}
+footer .fp img{width:100%;height:100%;object-fit:cover;display:block}
+footer h2{color:#f8e9cc;font-size:clamp(2rem,8vw,3.6rem);margin-top:6px}
+footer p{margin-top:8px;font-size:17px}
+footer .sub{font-family:var(--disp);font-size:clamp(2.2rem,9vw,3.4rem);line-height:1.3;color:#f8e9cc}
+footer .venue-f{margin-top:30px}
+footer .fam{margin:30px auto 0;max-width:34rem;font-family:var(--disp);font-size:20px;line-height:1.9}
+
+/* ===================== 12. LIGHTBOX ===================== */
+#lb{position:fixed;inset:0;z-index:9000;background:rgba(40,12,18,.93);display:none;flex-direction:column;
+  align-items:center;justify-content:center;
+  padding:max(20px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(20px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+#lb.show{display:flex}
+#lb-img{max-width:92vw;max-height:76vh;object-fit:contain;border-radius:12px}
+#lb-count{margin-top:14px;color:#f8e9cc;font-size:17px}
+.lb-btn{position:absolute;min-width:48px;min-height:48px;border-radius:50%;border:1px solid var(--gold);
+  background:rgba(0,0,0,.3);color:#fff8ec;font-size:26px;cursor:pointer;line-height:1}
+.lb-close{top:max(12px,env(safe-area-inset-top,0px));right:max(12px,env(safe-area-inset-right,0px))}
+.lb-prev{left:8px;top:50%;margin-top:-24px}
+.lb-next{right:8px;top:50%;margin-top:-24px}
+
+/* ===================== 13. SCROLL REVEAL ===================== */
+.reveal{opacity:0;transform:translate3d(0,22px,0);transition:opacity 1.1s ease var(--d,0ms),transform 1.1s ease var(--d,0ms)}
+.reveal.in{opacity:1;transform:none}
+
+/* ===================== 14. REDUCED MOTION ===================== */
+@media (prefers-reduced-motion:reduce){
+  #plane .wing-top-fore,#plane .wing-top-hind,#plane .wing-bot-fore,#plane .wing-bot-hind,#plane .antennae{animation:none}
+  #bf-hint{transition:none}
+  .reveal{transition:none;opacity:1;transform:none}
+  .petal,.spark{display:none!important}
+  .seal,.letter,.flap{transition:none}
+  .ring,.burst,.flash{display:none}
+  #intro{transition-duration:.01s}
+  html{scroll-behavior:auto}
+}
+
+/* ===================== 15. PHONE LAYOUT ===================== */
+@media (max-width:600px){
+  section{padding:64px 0}
+  .h2{margin:8px 0 26px}
+  .hero{padding:56px 0 40px}
+  .frame{padding:44px 18px 36px}
+  .tl li{padding-left:58px}
+  .actions .btn{flex:1 1 200px}
+  .lb-prev{left:4px}
+  .lb-next{right:4px}
+}
+@media (max-width:380px){
+  .cd{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+</style>
+</head>
+<body>
+
+<!-- ============== FLIGHT PATH (full page height) ============== -->
+<svg id="route-svg" aria-hidden="true" focusable="false">
+  <defs>
+    <clipPath id="clipTrail"><rect id="clipRect" x="0" y="0" width="0" height="0"/></clipPath>
+  </defs>
+  <path id="route" fill="none" stroke="#b3262e" stroke-opacity=".3" stroke-width="4" stroke-linecap="round" stroke-dasharray="0 15"/>
+  <path id="trailPath" fill="none" stroke="#c9962b" stroke-opacity=".3" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="12 9" clip-path="url(#clipTrail)"/>
+</svg>
+
+<!-- ============== REALISTIC 3D BUTTERFLY ============== -->
+<div id="plane" aria-hidden="true">
+  <svg viewBox="0 0 86 86">
+    <defs>
+      <radialGradient id="fwGrad" cx="72%" cy="78%" r="78%">
+        <stop offset="0%" stop-color="#fff3b0"/>
+        <stop offset="22%" stop-color="#ffb72b"/>
+        <stop offset="56%" stop-color="#eb5e16"/>
+        <stop offset="82%" stop-color="#a8240c"/>
+        <stop offset="100%" stop-color="#1e0f09"/>
+      </radialGradient>
+      <radialGradient id="hwGrad" cx="78%" cy="68%" r="70%">
+        <stop offset="0%" stop-color="#ffe88a"/>
+        <stop offset="35%" stop-color="#ffa21f"/>
+        <stop offset="72%" stop-color="#d84912"/>
+        <stop offset="94%" stop-color="#3c160b"/>
+        <stop offset="100%" stop-color="#1a0d08"/>
+      </radialGradient>
+      <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#190e09"/>
+        <stop offset="45%" stop-color="#3d2418"/>
+        <stop offset="100%" stop-color="#120905"/>
+      </linearGradient>
+      <!-- Detailed Hindwing (Top) -->
+      <g id="hindwing">
+        <path d="M46 42 C34 39, 17 31, 12 21 C8 13, 15 6, 26 9 C37 12, 44 27, 46 42 Z"
+              fill="url(#hwGrad)" stroke="#1b0e08" stroke-width="1.8" stroke-linejoin="round"/>
+        <path d="M45 41 C35 35, 22 25, 14 18 M45 41 C36 30, 26 19, 19 11 M45 41 C39 27, 32 16, 27 10 M32 28 C25 26, 18 24, 12 22"
+              fill="none" stroke="#1b0e08" stroke-width="1.15" stroke-linecap="round"/>
+        <!-- White & Golden Marginal Spots -->
+        <circle cx="13.5" cy="18.5" r="1.2" fill="#fff9ea"/>
+        <circle cx="15.2" cy="14.2" r="1.3" fill="#fff9ea"/>
+        <circle cx="18.5" cy="10.8" r="1.2" fill="#fff9ea"/>
+        <circle cx="22.8" cy="9.4" r="1.1" fill="#ffe49e"/>
+        <circle cx="27.2" cy="9.8" r="1" fill="#ffe49e"/>
+      </g>
+      <!-- Detailed Forewing (Top) -->
+      <g id="forewing">
+        <path d="M49 42 C53 26, 49 6, 33 2 C21 -1, 15 7, 21 19 C27 31, 38 38, 49 42 Z"
+              fill="url(#fwGrad)" stroke="#1b0e08" stroke-width="2" stroke-linejoin="round"/>
+        <!-- Dark Apical Tip Overlay -->
+        <path d="M36 2.6 C24 0, 17 6, 20 16 C25 13, 33 9, 41 11 C39 6, 38 3.5, 36 2.6 Z"
+              fill="#1b0e08" fill-opacity=".86"/>
+        <!-- Wing Veins -->
+        <path d="M48 41 C45 28, 39 14, 32 4 M48 41 C41 29, 32 17, 23 8 M48 41 C38 31, 29 22, 21 16 M42 26 C35 20, 28 14, 20 12 M44 21 C39 13, 35 7, 30 3"
+              fill="none" stroke="#1b0e08" stroke-width="1.25" stroke-linecap="round"/>
+        <!-- Sub-apical Amber/White Monarch Spots -->
+        <ellipse cx="32.5" cy="5.5" rx="2.1" ry="1.1" transform="rotate(-24 32.5 5.5)" fill="#ffdfa0"/>
+        <ellipse cx="27.5" cy="6.8" rx="2.3" ry="1.2" transform="rotate(-20 27.5 6.8)" fill="#fff8e7"/>
+        <ellipse cx="23.2" cy="9.6" rx="2" ry="1.1" transform="rotate(-15 23.2 9.6)" fill="#ffdfa0"/>
+        <circle cx="37.2" cy="4.2" r="1.1" fill="#fff8e7"/>
+        <circle cx="20.2" cy="13.2" r="1.15" fill="#fff8e7"/>
+        <circle cx="21.2" cy="17.2" r="1" fill="#fff8e7"/>
+        <!-- Subtle Iridescent Shimmer -->
+        <path d="M46 37 C43 26, 36 17, 28 13" fill="none" stroke="#fff6d6" stroke-opacity=".45" stroke-width="1.5" stroke-linecap="round"/>
+      </g>
+    </defs>
+
+    <!-- Upper & Lower Articulated Wings -->
+    <g class="wing-top-hind"><use href="#hindwing"/></g>
+    <g class="wing-bot-hind"><use href="#hindwing" transform="translate(0 86) scale(1 -1)"/></g>
+    <g class="wing-top-fore"><use href="#forewing"/></g>
+    <g class="wing-bot-fore"><use href="#forewing" transform="translate(0 86) scale(1 -1)"/></g>
+
+    <!-- Realistic Thorax, Abdomen & Head -->
+    <ellipse cx="38" cy="43" rx="11" ry="2.2" fill="url(#bodyGrad)"/>
+    <path d="M29 43h16" stroke="#d9b382" stroke-width=".7" stroke-dasharray="1.3 1.6" opacity=".75"/>
+    <ellipse cx="51.5" cy="43" rx="6.2" ry="3.1" fill="#23130c" stroke="#0f0704" stroke-width=".8"/>
+    <circle cx="51" cy="41.8" r=".8" fill="#fff8e7" opacity=".7"/>
+    <circle cx="53.2" cy="44.1" r=".7" fill="#fff8e7" opacity=".7"/>
+    <circle cx="58.8" cy="43" r="2.8" fill="#160b06"/>
+    <circle cx="59.6" cy="41.4" r=".75" fill="#3b2316"/>
+    <circle cx="59.6" cy="44.6" r=".75" fill="#3b2316"/>
+
+    <!-- Curved Clubbed Antennae -->
+    <g class="antennae">
+      <path d="M60.5 41.5 C65 36, 71 34, 75 36.5" fill="none" stroke="#160b06" stroke-width="1.1" stroke-linecap="round"/>
+      <path d="M60.5 44.5 C65 50, 71 52, 75 49.5" fill="none" stroke="#160b06" stroke-width="1.1" stroke-linecap="round"/>
+      <ellipse cx="75.4" cy="36.7" rx="1.6" ry=".95" transform="rotate(20 75.4 36.7)" fill="#c9962b"/>
+      <ellipse cx="75.4" cy="49.3" rx="1.6" ry=".95" transform="rotate(-20 75.4 49.3)" fill="#c9962b"/>
+    </g>
+  </svg>
+</div>
+<div id="bf-hint" aria-hidden="true">खाली स्क्रोल करा ↓</div>
+
+<!-- ============== CANDLE-GLOW CURSOR CANVAS ============== -->
+<canvas id="fx" aria-hidden="true"></canvas>
+
+<!-- ============== OPENING: SEALED INVITATION ============== -->
+<div id="intro" role="dialog" aria-modal="true" aria-label="निमंत्रण उघडा">
+  <div class="scene" id="scene">
+    <div class="env">
+      <div class="lining"></div>
+      <div class="letter" id="letter">
+        <p class="l-bless">|| श्री गजानन प्रसन्न ||</p>
+        <p class="l-small">शुभ विवाह निमंत्रण</p>
+        <h2 class="l-names">प्रतिक<span>आणि</span>अंकिता</h2>
+        <p class="l-date">१२ डिसेंबर २०२६</p>
+      </div>
+      <div class="front"></div>
+      <div class="gilt"></div>
+      <div class="flap" id="flap">
+        <div class="face out"></div>
+        <div class="face in"></div>
+      </div>
+      <span class="ring" id="ring"></span>
+      <span class="burst" id="burst"></span>
+      <button class="seal" id="seal" type="button" aria-label="निमंत्रण उघडण्यासाठी सील दाबा">P&amp;A</button>
+    </div>
+  </div>
+  <p class="intro-hint" id="intro-hint">निमंत्रण उघडण्यासाठी सीलवर टॅप करा</p>
+  <span class="flash" id="flash"></span>
+</div>
+
+<!-- ============== MUSIC ============== -->
+<audio id="chime" src="seal-chime.mp3" preload="auto"></audio>
+<audio id="reading" src="reading-music.mp3" loop preload="auto"></audio>
+<button id="music" type="button" aria-pressed="true">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg>
+  <span class="lbl">संगीत चालू</span>
+</button>
+
+<!-- ============== HERO ============== -->
+<section class="hero" id="top">
+  <div class="hero-bg" id="hero-bg" aria-hidden="true"></div>
+  <div class="hero-in reveal">
+    <div class="frame">
+      <p class="blessing">|| श्री गजानन प्रसन्न ||</p>
+      <h1 class="names">
+        <span>प्रतिक</span>
+        <span class="amp">आणि</span>
+        <span>अंकिता</span>
+      </h1>
+      <p class="subtitle">शुभ विवाह निमंत्रण</p>
+      <p class="hero-date">१२ डिसेंबर २०२६ · सायंकाळी ४:३५</p>
+      <button class="btn" type="button" data-scroll="countdown">तारीख राखून ठेवा</button>
+      <p class="hint">खाली स्क्रोल करा</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============== THE COUPLE ============== -->
+<section id="couple" class="bg-floral">
+  <div class="wrap">
+    <p class="eyebrow reveal">शुभ विवाह</p>
+    <h2 class="h2 reveal">प्रतिक आणि अंकिता</h2>
+    <div class="couple stagger">
+      <article class="person reveal">
+        <p class="label">चि.</p>
+        <div class="portrait"><img src="photo1.jpg" alt="प्रतिक, वर" style="object-position:50% 22%"></div>
+        <h3 class="pname">प्रतिक</h3>
+        <p class="bio">कै. खंडू गोविंदा सैद यांचा नातू आणि श्री./सौ. सुनिता गोविंद खंडू सैद<br>रा. गिरवली, ता. आंबेगाव, जि. पुणे यांचे ज्येष्ठ सुपुत्र</p>
+      </article>
+      <article class="person reveal">
+        <p class="label">चि. सौ. का.</p>
+        <div class="portrait"><img src="photo4.jpg" alt="अंकिता, वधू" style="object-position:50% 30%"></div>
+        <h3 class="pname">अंकिता</h3>
+        <p class="bio">कै.तबाजी विठोबा टेमगिरे यांची नात आणि श्री./सौ. सुरेखा मच्छिंद्र तबाजी टेमगिरे<br>रा. थोरांदळे ता. आंबेगाव जि. पुणे यांची कनिष्ठ सुकन्या</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============== COUNTDOWN (WITH SCRATCH TO REVEAL) ============== -->
+<section id="countdown" class="bg-lotus">
+  <div class="wrap">
+    <p class="eyebrow reveal">शुभ मुहूर्त</p>
+    <h2 class="h2 reveal">शुभ घटिका जवळ येत आहे</h2>
+
+    <div class="scratch-box unrevealed reveal" id="scratch-box">
+      <canvas id="scratch-canvas" aria-label="शुभ मुहूर्त पाहण्यासाठी येथे Scratch करा"></canvas>
+      <div class="scratch-inner">
+        <div class="scratch-center">
+          <!--<p class="scratch-date-banner">✨ शनिवार, १२ डिसेंबर २०२६ · सायंकाळी ४:३५ वा. ✨</p>-->
+        </div>
+        <div class="cd" id="cd">
+          <div><b id="cd-d">--</b><span>दिवस</span></div>
+          <div><b id="cd-h">--</b><span>तास</span></div>
+          <div><b id="cd-m">--</b><span>मिनिटे</span></div>
+          <div><b id="cd-s">--</b><span>सेकंद</span></div>
+        </div>
+        <p class="just" id="just">विवाह संपन्न</p>
+      </div>
+    </div>
+    <!--<div class="scratch-badge reveal" id="scratch-status">
+      <span>🪙 शुभ मुहूर्त उघडण्यासाठी वरील सोनेरी कार्ड बोटाने घासा</span>
+      <button type="button" class="scratch-skip" id="scratch-skip-btn">थेट पाहा</button>
+    </div>-->
+  </div>
+</section>
+
+<!-- ============== VENUE DETAILS + MAP ============== -->
+<section id="venue" class="bg-floral">
+  <div class="wrap">
+    <p class="eyebrow reveal">विवाह स्थळ</p>
+    <h2 class="h2 reveal">आम्ही आपली वाट पाहत आहोत</h2>
+    <div class="vgrid stagger">
+      <div class="vcard reveal">
+        <h3>दिनांक</h3>
+        <p>१२ डिसेंबर २०२६</p>
+        <p>शनिवार</p>
+      </div>
+      <div class="vcard reveal">
+        <h3>वेळ</h3>
+        <p>सायंकाळी ४:३५</p>
+      </div>
+      <div class="vcard reveal">
+        <h3>स्थळ</h3>
+        <p>शंतनू गार्डन मंगल कार्यालय</p>
+        <p>मंचर-घोडेगाव रोड, कोटमदरा फाटा जवळ ता. आंबेगाव जि. पुणे</p>
+      </div>
+    </div>
+    <div class="actions reveal">
+      <button class="btn" type="button" id="ics-btn">कॅलेंडरमध्ये जोडा</button>
+      <a class="btn ghost" href="#" target="_blank" rel="noopener noreferrer" data-maps>दिशा मिळवा</a>
+    </div>
+    <a class="mapcard reveal" href="#" target="_blank" rel="noopener noreferrer" data-maps aria-label="गूगल मॅप्सवर शंतनू गार्डन मंगल कार्यालय उघडा">
+      <svg viewBox="0 0 640 400" role="img" aria-label="शंतनू गार्डन मंगल कार्यालयाचा चित्रमय नकाशा">
+        <rect width="640" height="400" fill="#efe3c8"/>
+        <path d="M0 300C120 260 220 330 340 290S520 180 640 210" fill="none" stroke="#b9d7d4" stroke-width="34"/>
+        <path d="M0 120H640M0 250H640M180 0V400M460 0V400" stroke="#fffaf0" stroke-width="16"/>
+        <path d="M0 190L640 160M300 0L340 400" stroke="#fffaf0" stroke-width="10"/>
+        <rect x="60" y="150" width="90" height="60" rx="6" fill="#d9c59a"/>
+        <rect x="200" y="30" width="110" height="70" rx="6" fill="#d9c59a"/>
+        <rect x="500" y="280" width="100" height="70" rx="6" fill="#d9c59a"/>
+        <rect x="370" y="60" width="70" height="60" rx="6" fill="#cdbb8c"/>
+        <rect x="230" y="270" width="210" height="58" rx="10" fill="#c8e0b6"/>
+        <path d="M324 150C300 150 284 168 284 188C284 214 324 250 324 250S364 214 364 188C364 168 348 150 324 150Z" fill="#b3262e"/>
+        <circle cx="324" cy="188" r="11" fill="#fff8ec"/>
+        <rect x="130" y="306" width="380" height="50" rx="12" fill="#7a1e2a"/>
+        <text x="320" y="338" text-anchor="middle" font-family="Mukta,sans-serif" font-size="22" font-weight="600" fill="#fff8ec">शंतनू गार्डन मंगल कार्यालय</text>
+      </svg>
+    </a>
+  </div>
+</section>
+
+<!-- ============== EVENTS ============== -->
+<section id="events" class="bg-lotus">
+  <div class="wrap">
+    <p class="eyebrow reveal">कार्यक्रम</p>
+    <h2 class="h2 reveal">विवाह सोहळ्याचे कार्यक्रम</h2>
+    <ol class="tl" id="timeline"></ol>
+  </div>
+</section>
+
+<!-- ============== PHOTO ALBUM ============== -->
+<section id="album" class="bg-floral">
+  <div class="wrap">
+    <p class="eyebrow reveal">आठवणी</p>
+    <h2 class="h2 reveal">छायाचित्रे</h2>
+    <div class="grid reveal" id="album-grid"></div>
+  </div>
+</section>
+
+<!-- ============== FOOTER ============== -->
+<footer>
+  <div class="bust reveal">
+    <div class="fp"><img src="photo1.jpg" alt="प्रतिक, वर" style="object-position:50% 22%"></div>
+    <div class="fp"><img src="photo4.jpg" alt="अंकिता, वधू" style="object-position:50% 30%"></div>
+  </div>
+  <div class="nrow reveal">
+    <span>प्रतिक</span>
+    <svg class="hands" viewBox="0 0 120 52" role="img" aria-label="हातात हात">
+      <rect x="2" y="14" width="16" height="24" rx="3" fill="#b3262e" stroke="#e9c77a" stroke-width="1.2"/>
+      <rect x="102" y="14" width="16" height="24" rx="3" fill="#b3262e" stroke="#e9c77a" stroke-width="1.2"/>
+      <path d="M18 18H46Q58 18 67 27L72 32Q75 37 68 38H18Z" fill="#cf9569" stroke="#7a4a2a" stroke-width="1" stroke-linejoin="round"/>
+      <path d="M102 18H74Q62 18 53 27L48 32Q45 37 52 38H102Z" fill="#c58b62" stroke="#7a4a2a" stroke-width="1" stroke-linejoin="round"/>
+      <path d="M54 29Q58 34 63 31M57 25Q62 30 67 27M51 33Q55 38 60 35" fill="none" stroke="#7a4a2a" stroke-width="1" stroke-linecap="round"/>
+      <path d="M18 22v12M102 22v12" stroke="#e9c77a" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    <span>अंकिता</span>
+  </div>
+  <p class="yancha">यांचा</p>
+  <p class="msg">
+    <svg class="swas" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3V21M3 12H21M12 3H18M21 12V18M12 21H6M3 12V6" fill="none" stroke="#e9c77a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><g fill="#e0565f"><circle cx="6.8" cy="6.8" r="1.3"/><circle cx="17.2" cy="6.8" r="1.3"/><circle cx="17.2" cy="17.2" r="1.3"/><circle cx="6.8" cy="17.2" r="1.3"/></g></svg>
+    <span>॥ शुभविवाह ||</span>
+    <svg class="swas" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3V21M3 12H21M12 3H18M21 12V18M12 21H6M3 12V6" fill="none" stroke="#e9c77a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><g fill="#e0565f"><circle cx="6.8" cy="6.8" r="1.3"/><circle cx="17.2" cy="6.8" r="1.3"/><circle cx="17.2" cy="17.2" r="1.3"/><circle cx="6.8" cy="17.2" r="1.3"/></g></svg>
+  </p>
+  <p class="mitti">मिती मागशिर्ष शु.३ शके १९४८ शनिवार दि. १२/१२/२०२६ रोजी साय ४:३५ मि.<br>या शुभमुहुर्तावर करव्याचे योजिले आहे.</p>
+  <p class="venue-f">शंतनू गार्डन मंगल कार्यालय</p>
+  <p>मंचर-घोडेगाव रोड, कोटमदरा फाटा जवळ ता. आंबेगाव जि. पुणे</p>
+  <p class="fam">आपल्या उपस्थितीने हा विवाह सोहळा रंगवावा आणि वधू-वरांना शुभाशीर्वाद द्यावेत, हीच सैद आणि टेमगिरे परिवाराची विनंती.</p>
+</footer>
+
+<!-- ============== LIGHTBOX ============== -->
+<div id="lb" role="dialog" aria-modal="true" aria-label="छायाचित्र पाहा" aria-hidden="true">
+  <button class="lb-btn lb-close" type="button" aria-label="बंद करा">&times;</button>
+  <button class="lb-btn lb-prev" type="button" aria-label="मागील छायाचित्र">&#8249;</button>
+  <img id="lb-img" alt="">
+  <button class="lb-btn lb-next" type="button" aria-label="पुढील छायाचित्र">&#8250;</button>
+  <p id="lb-count"></p>
+</div>
+
+<script>
+/* =====================================================================
+   1. CONFIG: all details as supplied
+   ===================================================================== */
+const CONFIG = {
+  nameOrder: 'प्रतिक आणि अंकिता',
+  targetIso: '2026-12-12T16:35:00+05:30',
+  venue: 'शंतनू गार्डन मंगल कार्यालय',
+  address: 'मंचर-घोडेगाव रोड, कोटमदरा फाटा जवळ ता. आंबेगाव जि. पुणे',
+  maps: 'https://www.google.com/maps/place/Shantanu+Garden/@19.0347585,73.847124,17z/data=!4m14!1m7!3m6!1s0x3bdd372e8e63d4bf:0x3cf5cf9ce46eb0d3!2sShantanu+Garden!8m2!3d19.0347585!4d73.8497043!16s%2Fg%2F11f6f_r6r6!3m5!1s0x3bdd372e8e63d4bf:0x3cf5cf9ce46eb0d3!8m2!3d19.0347585!4d73.8497043!16s%2Fg%2F11f6f_r6r6?entry=ttu&g_ep=EgoyMDI2MTAxOC4wIKXMDSoASAFQAw%3D%3D',
+  functions: [
+    { name: 'साखरपुडा', date: '१२ डिसेंबर २०२६', day: 'शनिवार', time: 'सकाळी १०:३०', venue: '', iso: '2026-12-12T10:30:00+05:30' },
+    { name: 'हळद',      date: '१२ डिसेंबर २०२६', day: 'शनिवार', time: 'सकाळी ११:३०', venue: '', iso: '2026-12-12T11:30:00+05:30' },
+    { name: 'विवाह',    date: '१२ डिसेंबर २०२६', day: 'शनिवार', time: 'सायंकाळी ४:३५', venue: '', iso: '2026-12-12T16:35:00+05:30' }
+  ]
+};
+
+const PHOTOS = [
+  { src: 'photo1.jpg', pos: '50% 15%' },
+  { src: 'photo2.jpg', pos: '50% 40%' },
+  { src: 'photo3.jpg', pos: '50% 18%' },
+  { src: 'photo4.jpg', pos: '50% 25%' },
+  { src: 'photo5.jpg', pos: '50% 15%' }
+];
+
+/* =====================================================================
+   2. HELPERS
+   ===================================================================== */
+const $  = (s, c = document) => c.querySelector(s);
+const $$ = (s, c = document) => Array.from(c.querySelectorAll(s));
+const mr = n => String(n).replace(/\d/g, d => '०१२३४५६७८९'[d]);
+const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const coarse = window.matchMedia('(pointer: coarse)').matches;
+const root = document.documentElement;
+PHOTOS.forEach((p, i) => { p.alt = 'प्रतिक आणि अंकिता यांचे छायाचित्र ' + mr(i + 1); });
+
+function gcalUrl(f) {
+  const s = new Date(f.iso), e = new Date(s.getTime() + 3600000);
+  const st = d => d.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+  return 'https://calendar.google.com/calendar/render?action=TEMPLATE'
+    + '&text=' + encodeURIComponent(f.name + ' - ' + CONFIG.nameOrder)
+    + '&dates=' + st(s) + '/' + st(e)
+    + '&location=' + encodeURIComponent((f.venue || CONFIG.venue) + ', ' + CONFIG.address);
+}
+
+/* =====================================================================
+   3. RENDER: events, album, map links, stagger groups
+   ===================================================================== */
+(function render() {
+  $$('[data-maps]').forEach(a => { a.href = CONFIG.maps; });
+
+  const tl = $('#timeline');
+  CONFIG.functions.forEach((f, i) => {
+    const li = document.createElement('li');
+    li.className = 'reveal';
+    li.innerHTML =
+      '<span class="num">' + mr(i + 1) + '</span>' +
+      '<h3>' + f.name + '</h3>' +
+      '<div class="meta">' +
+        '<p><b>दिनांक</b>' + f.date + '</p>' +
+        '<p><b>वार</b>' + f.day + '</p>' +
+        '<p><b>वेळ</b>' + f.time + '</p>' +
+        '<p><b>स्थळ</b>' + (f.venue || CONFIG.venue) + '</p>' +
+      '</div>' +
+      '<div class="links">' +
+        '<a class="btn ghost" href="' + CONFIG.maps + '" target="_blank" rel="noopener noreferrer">दिशा मिळवा</a>' +
+        '<a class="btn ghost" href="' + gcalUrl(f) + '" target="_blank" rel="noopener noreferrer">कॅलेंडरमध्ये जोडा</a>' +
+      '</div>';
+    tl.appendChild(li);
+  });
+
+  const grid = $('#album-grid');
+  PHOTOS.forEach((p, i) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.setAttribute('aria-label', 'छायाचित्र ' + mr(i + 1) + ' मोठे पाहा');
+    const img = new Image();
+    img.src = p.src;
+    img.alt = p.alt;
+    img.decoding = 'async';
+    img.loading = 'lazy';
+    img.style.objectPosition = p.pos;
+    b.appendChild(img);
+    b.addEventListener('click', () => openLb(i));
+    grid.appendChild(b);
+  });
+
+  $$('.stagger').forEach(g => {
+    Array.from(g.children).forEach((c, i) => c.style.setProperty('--d', (i * 120) + 'ms'));
+  });
+})();
+
+/* =====================================================================
+   4. OPENING: seal press, crack (chime), flap lifts, card rises, flash, fade
+   ===================================================================== */
+const intro = $('#intro'), seal = $('#seal'), ring = $('#ring'), burst = $('#burst'),
+      flash = $('#flash'), hint = $('#intro-hint'), flap = $('#flap'),
+      letter = $('#letter'), scene = $('#scene');
+root.classList.add('locked');
+
+(function buildBurst() {
+  if (reduce) return;
+  for (let i = 0; i < 24; i++) {
+    const s = document.createElement('span');
+    const a = (Math.PI * 2 * i) / 24 + Math.random() * 0.3;
+    const d = 90 + Math.random() * 110;
+    s.style.setProperty('--x', (Math.cos(a) * d).toFixed(1) + 'px');
+    s.style.setProperty('--y', (Math.sin(a) * d).toFixed(1) + 'px');
+    s.style.animationDelay = (Math.random() * 0.15).toFixed(2) + 's';
+    burst.appendChild(s);
+  }
+})();
+
+const chime = $('#chime'), reading = $('#reading'), musicBtn = $('#music');
+chime.volume = 0.8;
+reading.volume = 0;
+let fadeToken = 0;
+function fadeTo(target, ms) {
+  const token = ++fadeToken;
+  const from = reading.volume, t0 = performance.now();
+  (function step(now) {
+    if (token !== fadeToken) return;
+    const k = Math.min(1, (now - t0) / ms);
+    reading.volume = Math.max(0, Math.min(1, from + (target - from) * k));
+    if (k < 1) requestAnimationFrame(step);
+  })(t0);
+}
+function setMusicBtn() {
+  const on = !reading.paused;
+  musicBtn.setAttribute('aria-pressed', String(on));
+  $('.lbl', musicBtn).textContent = on ? 'संगीत चालू' : 'संगीत बंद';
+}
+function startReading() {
+  reading.volume = 0;
+  const p = reading.play();
+  if (p && p.then) p.then(() => { fadeTo(0.3, 2500); setMusicBtn(); }).catch(setMusicBtn);
+  else { fadeTo(0.3, 2500); setMusicBtn(); }
+}
+musicBtn.addEventListener('click', () => {
+  if (reading.paused) {
+    const p = reading.play();
+    if (p && p.catch) p.catch(() => {});
+    fadeTo(0.3, 800);
+    setMusicBtn();
+  } else {
+    fadeTo(0, 500);
+    setTimeout(() => { reading.pause(); setMusicBtn(); }, 520);
+  }
+});
+
+let opened = false;
+seal.addEventListener('click', () => {
+  if (opened) return;
+  opened = true;
+  seal.disabled = true;
+  hint.style.opacity = '0';
+  chime.currentTime = 0;
+  const cp = chime.play();
+  if (cp && cp.catch) cp.catch(() => {});
+  if (reduce) {
+    seal.classList.add('crack');
+    flap.classList.add('open');
+    scene.classList.add('opened');
+    letter.classList.add('rise');
+    intro.classList.add('gone');
+    setTimeout(finishIntro, 300);
+    return;
+  }
+  seal.classList.add('press');
+  setTimeout(() => { seal.classList.add('crack'); ring.classList.add('go'); burst.classList.add('go'); }, 260);
+  setTimeout(() => { flap.classList.add('open'); scene.classList.add('opened'); }, 520);
+  setTimeout(() => letter.classList.add('rise'), 1000);
+  setTimeout(() => flash.classList.add('go'), 1700);
+  setTimeout(() => intro.classList.add('gone'), 2000);
+  setTimeout(finishIntro, 2800);
+});
+
+function finishIntro() {
+  intro.classList.add('done');
+  root.classList.remove('locked');
+  musicBtn.classList.add('show');
+  startReading();
+  if (!reduce) { startPetals(); startGlitter(); startGlow(); }
+  $$('.reveal').forEach(el => { if (reduce) el.classList.add('in'); else io.observe(el); });
+  initScratchCard();
+  if (reduce) return;
+  onScroll();
+}
+
+/* =====================================================================
+   5. SCROLL REVEAL
+   ===================================================================== */
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  });
+}, { threshold: 0.12 });
+
+/* =====================================================================
+   6. COUNTDOWN + INTERACTIVE GOLD FOIL SCRATCH TO REVEAL
+   ===================================================================== */
+const target = Date.parse(CONFIG.targetIso);
+const cd = { d: $('#cd-d'), h: $('#cd-h'), m: $('#cd-m'), s: $('#cd-s') };
+function tickCountdown() {
+  const diff = target - Date.now();
+  if (diff <= 0) {
+    $('#cd').style.display = 'none';
+    $('#just').style.display = 'block';
+    clearInterval(cdTimer);
+    return;
+  }
+  const pad = n => mr(String(n).padStart(2, '0'));
+  cd.d.textContent = mr(Math.floor(diff / 864e5));
+  cd.h.textContent = pad(Math.floor((diff % 864e5) / 36e5));
+  cd.m.textContent = pad(Math.floor((diff % 36e5) / 6e4));
+  cd.s.textContent = pad(Math.floor((diff % 6e4) / 1e3));
+}
+tickCountdown();
+const cdTimer = setInterval(tickCountdown, 1000);
+
+function initScratchCard() {
+  const box = $('#scratch-box');
+  const canvas = $('#scratch-canvas');
+  const status = $('#scratch-status');
+  const skipBtn = $('#scratch-skip-btn');
+  if (!box || !canvas) return;
+
+  const ctx = canvas.getContext('2d');
+  let isDrawing = false;
+  let revealed = false;
+  let lastPt = null;
+  let moveCount = 0;
+
+  function drawGoldCover() {
+    if (revealed) return;
+    const rect = box.getBoundingClientRect();
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = Math.max(1, Math.floor(rect.width * dpr));
+    canvas.height = Math.max(1, Math.floor(rect.height * dpr));
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    const w = rect.width, h = rect.height;
+    ctx.globalCompositeOperation = 'source-over';
+
+    // Rich Metallic Gold Foil Gradient
+    const grad = ctx.createLinearGradient(0, 0, w, h);
+    grad.addColorStop(0, '#9c6c19');
+    grad.addColorStop(0.22, '#f5d98e');
+    grad.addColorStop(0.48, '#c89228');
+    grad.addColorStop(0.75, '#fff1be');
+    grad.addColorStop(1, '#9b6916');
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, w, h);
+
+    // Decorative Royal Inner Frame
+    ctx.strokeStyle = 'rgba(122, 30, 42, 0.45)';
+    ctx.lineWidth = 2;
+    ctx.strokeRect(12, 12, w - 24, h - 24);
+    ctx.setLineDash([5, 5]);
+    ctx.strokeRect(18, 18, w - 36, h - 36);
+    ctx.setLineDash([]);
+
+    // Subtle Mandala Sparkle Dots
+    ctx.fillStyle = 'rgba(255, 250, 230, 0.35)';
+    for (let i = 0; i < 36; i++) {
+      const sx = ((i * 73) % Math.max(20, w - 40)) + 20;
+      const sy = ((i * 47) % Math.max(20, h - 40)) + 20;
+      ctx.beginPath();
+      ctx.arc(sx, sy, (i % 3) + 1, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    // Center Maroon Pill Prompt
+    const pw = Math.min(w - 44, 390), ph = 52;
+    const px = (w - pw) / 2, py = (h - ph) / 2 - 8;
+    ctx.fillStyle = 'rgba(122, 30, 42, 0.92)';
+    ctx.beginPath();
+    ctx.roundRect ? ctx.roundRect(px, py, pw, ph, 26) : ctx.rect(px, py, pw, ph);
+    ctx.fill();
+    ctx.strokeStyle = '#f6dca0';
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
+
+    ctx.fillStyle = '#fff8ec';
+    ctx.font = '600 ' + Math.min(20, Math.max(15, w * 0.042)) + 'px Mukta, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText('✨ शुभ मुहूर्त पाहण्यासाठी येथे Scratch करा ✨', w / 2, py + ph / 2);
+
+    ctx.fillStyle = '#4a1019';
+    ctx.font = '600 14px Mukta, sans-serif';
+    ctx.fillText('(बोटाने किंवा माऊसने स्क्रॅच करा)', w / 2, py + ph + 24);
+  }
+
+  function revealAll() {
+    if (revealed) return;
+    revealed = true;
+    canvas.classList.add('cleared');
+    box.classList.remove('unrevealed');
+    box.classList.add('revealed');
+    if (status) {
+      status.innerHTML = '<span>🎉 शुभ मुहूर्त: शनिवार, १२ डिसेंबर २०२६ · सायंकाळी ४:३५ वा. 🎉</span>';
+    }
+    // Golden celebration burst in the center of countdown
+    const r = box.getBoundingClientRect();
+    for (let i = 0; i < 22; i++) {
+      parts.push({
+        x: r.left + r.width / 2 + (Math.random() - 0.5) * r.width * 0.6,
+        y: r.top + r.height / 2 + (Math.random() - 0.5) * r.height * 0.5,
+        vx: (Math.random() - 0.5) * 3.2,
+        vy: -1 - Math.random() * 2.5,
+        life: 1.2,
+        r: 12 + Math.random() * 10
+      });
+    }
+    kickFx();
+  }
+
+  function scratchAt(clientX, clientY) {
+    if (revealed) return;
+    const rect = canvas.getBoundingClientRect();
+    const x = clientX - rect.left;
+    const y = clientY - rect.top;
+
+    ctx.globalCompositeOperation = 'destination-out';
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+    ctx.lineWidth = 44;
+
+    ctx.beginPath();
+    if (lastPt) {
+      ctx.moveTo(lastPt.x, lastPt.y);
+      ctx.lineTo(x, y);
+    } else {
+      ctx.moveTo(x, y);
+      ctx.lineTo(x + 0.1, y + 0.1);
+    }
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.arc(x, y, 22, 0, Math.PI * 2);
+    ctx.fill();
+
+    lastPt = { x, y };
+
+    // Emit golden dust particle
+    if (Math.random() < 0.7) {
+      parts.push({
+        x: clientX,
+        y: clientY,
+        vx: (Math.random() - 0.5) * 2,
+        vy: -0.5 - Math.random() * 1.5,
+        life: 1,
+        r: 9 + Math.random() * 7
+      });
+      kickFx();
+    }
+
+    if (++moveCount % 10 === 0) {
+      checkCleared();
+    }
+  }
+
+  function checkCleared() {
+    if (revealed) return;
+    try {
+      const w = canvas.width, h = canvas.height;
+      const data = ctx.getImageData(0, 0, w, h).data;
+      let clearPixels = 0, total = 0;
+      const stride = 32;
+      for (let i = 3; i < data.length; i += 4 * stride) {
+        total++;
+        if (data[i] < 128) clearPixels++;
+      }
+      if (total > 0 && clearPixels / total > 0.38) {
+        revealAll();
+      }
+    } catch (e) {}
+  }
+
+  canvas.addEventListener('pointerdown', e => {
+    if (revealed) return;
+    isDrawing = true;
+    lastPt = null;
+    if (canvas.setPointerCapture) canvas.setPointerCapture(e.pointerId);
+    scratchAt(e.clientX, e.clientY);
+  });
+  canvas.addEventListener('pointermove', e => {
+    if (!isDrawing || revealed) return;
+    scratchAt(e.clientX, e.clientY);
+  });
+  window.addEventListener('pointerup', () => {
+    if (isDrawing) {
+      isDrawing = false;
+      lastPt = null;
+      checkCleared();
+    }
+  });
+  if (skipBtn) skipBtn.addEventListener('click', revealAll);
+
+  drawGoldCover();
+  window.addEventListener('resize', () => { if (!revealed) drawGoldCover(); });
+}
+
+/* =====================================================================
+   7. ADD TO CALENDAR
+   ===================================================================== */
+$('#ics-btn').addEventListener('click', () => {
+  const t = document.getElementById('events');
+  if (t) t.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+});
+
+/* =====================================================================
+   8. SAVE THE DATE / SCROLL BUTTONS
+   ===================================================================== */
+$$('[data-scroll]').forEach(b => b.addEventListener('click', () => {
+  const t = document.getElementById(b.dataset.scroll);
+  if (t) t.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+}));
+
+/* =====================================================================
+   9. HERO PARALLAX + REALISTIC BUTTERFLY ROUTE
+   ===================================================================== */
+const heroBg = $('#hero-bg');
+const plane = $('#plane');
+const bfHint = $('#bf-hint');
+const routeSvg = $('#route-svg');
+const routePath = $('#route');
+const trailPath = $('#trailPath');
+const clipRect = $('#clipRect');
+let RW = 0, RH = 0, RL = 0;
+
+function buildRoute() {
+  RW = document.documentElement.clientWidth;
+  RH = document.documentElement.scrollHeight;
+  routeSvg.setAttribute('width', RW);
+  routeSvg.setAttribute('height', RH);
+  routeSvg.setAttribute('viewBox', '0 0 ' + RW + ' ' + RH);
+  clipRect.setAttribute('width', RW);
+  const seg = Math.max(420, Math.min(900, window.innerHeight * 0.9));
+  const n = Math.max(2, Math.ceil(RH / seg) + 1);
+  let d = '', prev = null;
+  for (let i = 0; i < n; i++) {
+    const y = RH * i / (n - 1);
+    const x = (i % 2 === 0 ? 0.1 : 0.9) * RW;
+    if (!prev) d += 'M' + x + ' ' + y;
+    else {
+      const mid = (prev.y + y) / 2;
+      d += ' C' + prev.x + ' ' + mid + ' ' + x + ' ' + mid + ' ' + x + ' ' + y;
+    }
+    prev = { x, y };
+  }
+  routePath.setAttribute('d', d);
+  trailPath.setAttribute('d', d);
+  RL = routePath.getTotalLength();
+  updateRoute();
+}
+
+function lengthAtY(y) {
+  let lo = 0, hi = RL;
+  for (let k = 0; k < 24; k++) {
+    const m = (lo + hi) / 2;
+    if (routePath.getPointAtLength(m).y < y) lo = m; else hi = m;
+  }
+  return (lo + hi) / 2;
+}
+
+function updateRoute() {
+  if (!RL) return;
+  const vh = window.innerHeight;
+  const sy = window.scrollY;
+  const targetY = Math.min(Math.max(sy + vh * 0.42, 0), RH);
+  clipRect.setAttribute('height', String(targetY));
+  const len = lengthAtY(targetY);
+  const p = routePath.getPointAtLength(len);
+  const q = routePath.getPointAtLength(Math.min(RL, len + 3));
+  const ang = Math.atan2(q.y - p.y, q.x - p.x) * 180 / Math.PI;
+  plane.style.transform = 'translate3d(' + (p.x - 43).toFixed(1) + 'px,' + (vh * 0.42 - 43).toFixed(1) + 'px,0) rotate(' + ang.toFixed(1) + 'deg)';
+  const hx = Math.min(Math.max(p.x + 48, 8), RW - 190);
+  bfHint.style.transform = 'translate3d(' + hx.toFixed(1) + 'px,' + (vh * 0.42 - 18).toFixed(1) + 'px,0)';
+  bfHint.classList.toggle('show', sy < 160);
+}
+
+let ticking = false;
+function onScroll() {
+  if (!ticking) {
+    ticking = true;
+    requestAnimationFrame(() => {
+      ticking = false;
+      if (!reduce) heroBg.style.transform = 'translate3d(0,' + (window.scrollY * 0.35).toFixed(1) + 'px,0)';
+      updateRoute();
+    });
+  }
+}
+window.addEventListener('scroll', onScroll, { passive: true });
+
+let resizeTimer = 0;
+function scheduleRoute() {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(buildRoute, 120);
+}
+window.addEventListener('resize', scheduleRoute);
+new ResizeObserver(scheduleRoute).observe(document.body);
+buildRoute();
+
+/* =====================================================================
+   10. FALLING PETALS
+   ===================================================================== */
+function startPetals() {
+  const n = window.matchMedia('(max-width: 600px)').matches ? 10 : 18;
+  for (let i = 0; i < n; i++) {
+    const p = document.createElement('span');
+    p.className = 'petal' + (i % 3 === 0 ? ' gold' : '');
+    p.style.left = (Math.random() * 100).toFixed(1) + '%';
+    p.style.animationDuration = (16 + Math.random() * 12).toFixed(1) + 's';
+    p.style.animationDelay = (-Math.random() * 24).toFixed(1) + 's';
+    document.body.appendChild(p);
+  }
+}
+
+/* =====================================================================
+   11. GLITTER
+   ===================================================================== */
+const STAR = '<svg viewBox="0 0 10 10" aria-hidden="true"><path d="M5 0Q5.6 4.4 10 5Q5.6 5.6 5 10Q4.4 5.6 0 5Q4.4 4.4 5 0Z"/></svg>';
+function startGlitter() {
+  for (let i = 0; i < 24; i++) {
+    const s = document.createElement('span');
+    s.className = 'spark';
+    s.innerHTML = STAR;
+    s.style.left = (Math.random() * 100).toFixed(1) + '%';
+    s.style.top = (Math.random() * 100).toFixed(1) + '%';
+    s.style.width = s.style.height = (8 + Math.random() * 8).toFixed(0) + 'px';
+    s.style.animationDuration = (3 + Math.random() * 3).toFixed(1) + 's';
+    s.style.animationDelay = (-Math.random() * 6).toFixed(1) + 's';
+    s.style.color = Math.random() < 0.5 ? '#f6d27a' : '#f3a9a4';
+    document.body.appendChild(s);
+  }
+}
+
+/* =====================================================================
+   12. CANDLE-GLOW CURSOR + TAP RIPPLE
+   ===================================================================== */
+const fx = $('#fx'), fc = fx.getContext('2d');
+let parts = [], ripples = [], fxRaf = 0, mouse = null, mouseAt = 0;
+function sizeFx() {
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  fx.width = Math.floor(window.innerWidth * dpr);
+  fx.height = Math.floor(window.innerHeight * dpr);
+  fc.setTransform(dpr, 0, 0, dpr, 0, 0);
+}
+function kickFx() { if (!fxRaf) fxRaf = requestAnimationFrame(frameFx); }
+function frameFx(t) {
+  fc.clearRect(0, 0, window.innerWidth, window.innerHeight);
+  parts = parts.filter(p => p.life > 0);
+  parts.forEach(p => {
+    p.x += p.vx; p.y += p.vy; p.life -= 0.03;
+    if (p.life <= 0) return;
+    const r = Math.max(0, p.r * p.life);
+    if (r === 0) return;
+    const g = fc.createRadialGradient(p.x, p.y, 0, p.x, p.y, r);
+    g.addColorStop(0, 'rgba(255,214,140,' + (p.life * 0.45).toFixed(3) + ')');
+    g.addColorStop(1, 'rgba(255,170,90,0)');
+    fc.fillStyle = g;
+    fc.beginPath(); fc.arc(p.x, p.y, r, 0, Math.PI * 2); fc.fill();
+  });
+  ripples = ripples.filter(r => r.life > 0);
+  ripples.forEach(r => {
+    r.rad += 2.2; r.life -= 0.02;
+    fc.strokeStyle = 'rgba(230,170,90,' + (Math.max(0, r.life) * 0.6).toFixed(3) + ')';
+    fc.lineWidth = 2;
+    fc.beginPath(); fc.arc(r.x, r.y, r.rad, 0, Math.PI * 2); fc.stroke();
+  });
+  if (mouse && performance.now() - mouseAt < 2500) {
+    const flick = 1 + Math.sin(t / 90) * 0.06 + (Math.random() - 0.5) * 0.04;
+    const R = 34 * flick;
+    const g = fc.createRadialGradient(mouse.x, mouse.y, 0, mouse.x, mouse.y, R);
+    g.addColorStop(0, 'rgba(255,220,150,0.55)');
+    g.addColorStop(1, 'rgba(255,170,90,0)');
+    fc.fillStyle = g;
+    fc.beginPath(); fc.arc(mouse.x, mouse.y, R, 0, Math.PI * 2); fc.fill();
+  }
+  if (parts.length || ripples.length || (mouse && performance.now() - mouseAt < 2500)) {
+    fxRaf = requestAnimationFrame(frameFx);
+  } else {
+    fxRaf = 0;
+    fc.clearRect(0, 0, window.innerWidth, window.innerHeight);
+  }
+}
+function startGlow() {
+  sizeFx();
+  window.addEventListener('resize', sizeFx);
+  if (!coarse) {
+    window.addEventListener('pointermove', e => {
+      if (e.pointerType !== 'mouse') return;
+      mouse = { x: e.clientX, y: e.clientY }; mouseAt = performance.now();
+      if (Math.random() < 0.6) parts.push({ x: e.clientX, y: e.clientY, vx: (Math.random() - 0.5) * 0.5, vy: -0.2 - Math.random() * 0.5, life: 1, r: 10 + Math.random() * 8 });
+      kickFx();
+    }, { passive: true });
+  } else {
+    window.addEventListener('pointerdown', e => {
+      ripples.push({ x: e.clientX, y: e.clientY, rad: 4, life: 1 });
+      kickFx();
+    }, { passive: true });
+  }
+}
+
+/* =====================================================================
+   13. PHOTO LIGHTBOX
+   ===================================================================== */
+const lb = $('#lb'), lbImg = $('#lb-img'), lbCount = $('#lb-count');
+let cur = 0, lastFocus = null, touchX = null;
+function showPhoto(i) {
+  cur = (i + PHOTOS.length) % PHOTOS.length;
+  lbImg.src = PHOTOS[cur].src;
+  lbImg.alt = PHOTOS[cur].alt;
+  lbCount.textContent = mr(cur + 1) + ' / ' + mr(PHOTOS.length);
+}
+function openLb(i) {
+  showPhoto(i);
+  lastFocus = document.activeElement;
+  lb.classList.add('show');
+  lb.setAttribute('aria-hidden', 'false');
+  $('.lb-close', lb).focus();
+}
+function closeLb() {
+  lb.classList.remove('show');
+  lb.setAttribute('aria-hidden', 'true');
+  if (lastFocus) lastFocus.focus();
+}
+$('.lb-close', lb).addEventListener('click', closeLb);
+$('.lb-prev', lb).addEventListener('click', () => showPhoto(cur - 1));
+$('.lb-next', lb).addEventListener('click', () => showPhoto(cur + 1));
+lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+document.addEventListener('keydown', e => {
+  if (!lb.classList.contains('show')) return;
+  if (e.key === 'Escape') closeLb();
+  else if (e.key === 'ArrowLeft') showPhoto(cur - 1);
+  else if (e.key === 'ArrowRight') showPhoto(cur + 1);
+});
+lb.addEventListener('touchstart', e => { touchX = e.changedTouches[0].clientX; }, { passive: true });
+lb.addEventListener('touchend', e => {
+  if (touchX === null) return;
+  const dx = e.changedTouches[0].clientX - touchX;
+  touchX = null;
+  if (Math.abs(dx) > 40) showPhoto(cur + (dx < 0 ? 1 : -1));
+}, { passive: true });
+</script>
+</body>
+</html>
